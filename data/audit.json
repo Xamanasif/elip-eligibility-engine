@@ -1,0 +1,1512 @@
+[
+  {
+    "id": "A01",
+    "employer": "Google",
+    "title": "Forward Deployed Engineer Intern, 2027",
+    "provider": "google",
+    "req_id": "96299220855595718",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": [
+      "penultimate"
+    ],
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG",
+      "LangGraph"
+    ],
+    "source_url": "https://www.google.com/about/careers/applications/jobs/results/96299220855595718-forward-deployed-engineer-intern-2027",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/forward-deployed-engineer-intern-2027-at-google-4489727942",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://www.google.com/about/careers/applications/jobs/results/96299220855595718-forward-deployed-engineer-intern-2027",
+        "note": "Strong technical fit. The indexed employer listing requires penultimate-year enrolment. A final-year 2027 student misses that requirement. Elip omits it and marks Strong fit. Live look-up shows a generic jobs screen, so current status is unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://www.google.com/about/careers/applications/jobs/results/96299220855595718-forward-deployed-engineer-intern-2027",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": "google-fde"
+  },
+  {
+    "id": "A02",
+    "employer": "Google",
+    "title": "Forward Deployed Engineer Internship",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://unstop.com/internships/forward-deployed-engineer-internship-google-1814240",
+    "elip_apply_url": "https://unstop.com/internships/forward-deployed-engineer-internship-google-1814240",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://unstop.com/internships/forward-deployed-engineer-internship-google-1814240",
+        "note": "Strong technical fit. Likely duplicate of #1 based on employer, normalized city, title and role description. This card routes to Unstop, while #1 routes to LinkedIn. Treat the same eligibility risk as provisional for this card."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://unstop.com/internships/forward-deployed-engineer-internship-google-1814240",
+        "note": "Google has another similarly named requisition (75665705386549958), but the Unstop card could not be tied to it or to #1 by an exact employer ID."
+      }
+    ],
+    "probable_group": "google-fde"
+  },
+  {
+    "id": "A03",
+    "employer": "Apple",
+    "title": "Software Engineer \u2013 AI & Data Platforms",
+    "provider": "apple",
+    "req_id": "200696143-1052",
+    "country": "IN",
+    "cities": [
+      "Hyderabad"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": null,
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": [
+      "bachelors"
+    ],
+    "minimum_experience_months": 12,
+    "experience_basis": "industry_equivalent",
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "platform engineering",
+    "skills": [
+      "CI"
+    ],
+    "source_url": "https://jobs.apple.com/en-us/details/200696143-1052/software-engineer-ai-data-platforms?team=SFTWR",
+    "elip_apply_url": "https://www.naukri.com/job-listings-software-engineer-ai-data-platforms-apple-india-pvt-ltd-hyderabad-1-to-3-years-211126500657",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.apple.com/en-us/details/200696143-1052/software-engineer-ai-data-platforms?team=SFTWR",
+        "note": "Relevant platform engineering. Elip calls it an internship. Live Apple page 200696143-1052 offered Submit Resume and required a bachelor\u2019s degree and 1\u20133 years of experience, counting internships, co-ops, research and significant projects. The Apple detail did not identify an internship. Confirm type with the employer and surface the minimum qualifications. Completed-degree eligibility for a 2027 student is unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.apple.com/en-us/details/200696143-1052/software-engineer-ai-data-platforms?team=SFTWR",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null,
+    "degree_completed": true
+  },
+  {
+    "id": "A04",
+    "employer": "MSD",
+    "title": "Digital Human Health Intern",
+    "provider": "workday",
+    "req_id": "R427220",
+    "country": "IN",
+    "cities": [
+      "Hyderabad",
+      "Pune"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-31",
+    "end_date": null,
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": 2027,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": true,
+    "role_family": "data analytics",
+    "skills": [
+      "forecasting"
+    ],
+    "source_url": "https://msd.wd5.myworkdayjobs.com/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Digital-Human-Health-Intern_R427220-1",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/digital-human-health-intern-at-msd-4491704088",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.msd.com/it/it/job/R427220/jointalentcommunity?applyType=JTC",
+        "note": "Relevant analytics and forecasting. The live official page exposed Apply, a 30 November posting end date with a day-before cutoff, a six-month January start and a mandatory curriculum placement. Web retrieval of the same URL showed an unavailable notice. Status is conflicting. Confirm with the employer ATS. Figures 3 and 11."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.msd.com/it/it/job/R427220/jointalentcommunity?applyType=JTC",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://msd.wd5.myworkdayjobs.com/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Digital-Human-Health-Intern_R427220-1",
+        "note": "Indexed exact Workday job R427220 corroborates early January, duration, and 30 November posting end. Direct retrieval served no readable job body. Conflicting status retained."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://msd.wd5.myworkdayjobs.com/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Digital-Human-Health-Intern_R427220-1",
+        "note": "Live employer Workday job R427220 rendered a role-specific Apply button and 30 November 2026 end date. The previous career-mirror status disagreement is retained as historical evidence. Academic placement and dates remain eligibility checks."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A05",
+    "employer": "Celonis",
+    "title": "Associate Technology Consultant, Galaxy Graduate Program",
+    "provider": "greenhouse",
+    "req_id": "8203121003",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "full_time",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-02-01",
+    "start_to": "2027-02-01",
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": [
+      "final_year",
+      "graduate"
+    ],
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "data analytics",
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "source_url": "https://job-boards.greenhouse.io/celonis/jobs/8203121003",
+    "elip_apply_url": "https://www.naukri.com/job-listings-associate-technology-consultant-galaxy-graduate-program-celonis-se-bengaluru-1-to-4-years-161126501446",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/celonis/jobs/8203121003",
+        "note": "Adjacent data/consulting fit. Official listing calls for full-time work from 1 February 2027. Elip categorizes it as an internship and recommends it as Good fit. Verified type/window mismatch."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/celonis/jobs/8203121003",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A06",
+    "employer": "Amazon",
+    "title": "Data Scientist I 6M Intern",
+    "provider": "amazon",
+    "req_id": "10443572",
+    "country": "IN",
+    "cities": [
+      "Chennai"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": [
+      "masters",
+      "doctorate"
+    ],
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "data science",
+    "skills": [
+      "SQL",
+      "forecasting"
+    ],
+    "source_url": "https://www.amazon.jobs/en/jobs/10443572/data-scientist-i-6m-intern",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/data-scientist-i-6m-intern-at-amazon-4494123892",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://www.amazon.jobs/en/jobs/10443572/data-scientist-i-6m-intern",
+        "note": "Strong modelling fit. Official requisition 10443572 shows Chennai and Apply. Advanced degree or equivalent in a related technical discipline is required. The combined degree may qualify, subject to employer interpretation and enrolment rules. Dates unknown."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://www.amazon.jobs/en/jobs/10443572/data-scientist-i-6m-intern",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A07",
+    "employer": "nference",
+    "title": "Intern \u2013 Data Scientist",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "data science",
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "source_url": "https://nference.com/careers",
+    "elip_apply_url": "https://www.instahyre.com/job-466442-intern-data-scientist-at-nference-2-bangalore/",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://nference.com/careers",
+        "note": "Strong healthcare data fit. Employer careers site found, exact listing only corroborated through external boards. Dates, exact eligibility and status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://nference.com/careers",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A08",
+    "employer": "Arthrex India",
+    "title": "Data Engineer Intern",
+    "provider": "keka",
+    "req_id": "171729",
+    "country": "IN",
+    "cities": [
+      "Pune"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "LLMs"
+    ],
+    "source_url": "https://arthrexindia.keka.com/careers/jobdetails/171729",
+    "elip_apply_url": "https://arthrexindia.keka.com/careers/jobdetails/171729",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://arthrexindia.keka.com/careers/jobdetails/171729",
+        "note": "Relevant Python, RAG and healthcare AI. Employer ATS destination could not be verified. Public mirror supports title and duties. Dates and status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://arthrexindia.keka.com/careers/jobdetails/171729",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A09",
+    "employer": "Uniphore",
+    "title": "Full Stack AI Engineer Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://in.linkedin.com/jobs/view/full-stack-ai-engineer-intern-6-months-internship-at-uniphore-4494796445",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/full-stack-ai-engineer-intern-6-months-internship-at-uniphore-4494796445",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://in.linkedin.com/jobs/view/full-stack-ai-engineer-intern-6-months-internship-at-uniphore-4494796445",
+        "note": "Strong full-stack AI fit. Employer-branded LinkedIn listing specifies six months. Exact corporate careers posting and January start unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://in.linkedin.com/jobs/view/full-stack-ai-engineer-intern-6-months-internship-at-uniphore-4494796445",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A10",
+    "employer": "Agoda",
+    "title": "Software Engineer Internship 2027",
+    "provider": "greenhouse",
+    "req_id": "6323041",
+    "country": "IN",
+    "cities": [
+      "Gurugram"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "closed",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-11",
+    "start_to": "2027-01-11",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "CI"
+    ],
+    "source_url": "https://careersatagoda.com/job/6323041-software-engineer-internship-2027-6-months-india-based-gurgaon-office/",
+    "elip_apply_url": "https://unstop.com/internships/software-engineer-internship-2027-agoda-1821519",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://careersatagoda.com/job/6323041-software-engineer-internship-2027-6-months-india-based-gurgaon-office/",
+        "note": "Strong software fit. Earlier employer listing specified 11 January\u201330 June. Exact posting redirects to an official notice that it is no longer accepting new applications. Closed."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://careersatagoda.com/job/6323041-software-engineer-internship-2027-6-months-india-based-gurgaon-office/",
+        "note": "The employer-hosted Greenhouse requisition also redirects to the general board with error=true."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A11",
+    "employer": "GoKwik",
+    "title": "Intern, Software Development",
+    "provider": "keka",
+    "req_id": "169089",
+    "country": "IN",
+    "cities": [
+      "Gurugram"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "React",
+      "TypeScript"
+    ],
+    "source_url": "https://gokwik.keka.com/careers/jobdetails/169089",
+    "elip_apply_url": "https://www.instahyre.com/job-466318-intern-software-development-at-gokwik-gurgaon/",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://gokwik.keka.com/careers/jobdetails/169089",
+        "note": "Strong full-stack commerce fit. Employer Keka posting shows Apply. January start and six-month term unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://gokwik.keka.com/careers/jobdetails/169089",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A12",
+    "employer": "GE Vernova",
+    "title": "Co-Op Intern-6",
+    "provider": "workday",
+    "req_id": "R5054938",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python"
+    ],
+    "source_url": "https://careers.gevernova.com/co-op-intern-6/job/R5054938",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/co-op-intern-6-at-ge-vernova-4494941460",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://careers.gevernova.com/co-op-intern-6/job/R5054938",
+        "note": "Relevant applied software and AI. Employer requisition R5054938 shows Bengaluru, intern and 2 December closing date. Related STEM may qualify. January start and duration unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://careers.gevernova.com/co-op-intern-6/job/R5054938",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A13",
+    "employer": "Fampay",
+    "title": "Backend Engineering Intern",
+    "provider": "lever",
+    "req_id": "cf014ef0-218a-4041-a238-ff91c7b9a5bc",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "backend engineering",
+    "skills": [
+      "Python"
+    ],
+    "source_url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc/apply",
+    "elip_apply_url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc/apply",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc/apply",
+        "note": "Strong backend fit. Elip points to the employer\u2019s Fam Lever form, which offered a six-month option and asks when the applicant can join. January start unresolved. Likely same vacancy as #14."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc/apply",
+        "note": "Lever employer name is Fam, under the legacy fampay board slug. The LinkedIn card did not expose the same requisition ID."
+      }
+    ],
+    "probable_group": "fam-backend"
+  },
+  {
+    "id": "A14",
+    "employer": "Fam",
+    "title": "Backend Engineering Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "backend engineering",
+    "skills": [
+      "Python"
+    ],
+    "source_url": "https://www.linkedin.com/jobs/view/backend-engineering-intern-at-fam-4495266686",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/backend-engineering-intern-at-fam-4495266686",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://www.linkedin.com/jobs/view/backend-engineering-intern-at-fam-4495266686",
+        "note": "Same title, city, employer brand and match reason as #13. Different external URL. One official requisition was identified. Likely duplicate, pending exact LinkedIn-to-ATS ID mapping."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://www.linkedin.com/jobs/view/backend-engineering-intern-at-fam-4495266686",
+        "note": "Lever employer name is Fam, under the legacy fampay board slug. The LinkedIn card did not expose the same requisition ID."
+      }
+    ],
+    "probable_group": "fam-backend"
+  },
+  {
+    "id": "A15",
+    "employer": "GE Vernova",
+    "title": "Software Engineering Intern",
+    "provider": "workday",
+    "req_id": "R5050069",
+    "country": "IN",
+    "cities": [
+      "Hyderabad",
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "Python"
+    ],
+    "source_url": "https://careers.gevernova.com/software-engineering-intern/job/R5050069",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-ge-vernova-4494953039",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://careers.gevernova.com/software-engineering-intern/job/R5050069",
+        "note": "Strong Python/platform fit. Employer requisition R5050069 shows Hyderabad and Bengaluru, intern and 2 December closing date. Distinct from #12. Start and duration unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://careers.gevernova.com/software-engineering-intern/job/R5050069",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A16",
+    "employer": "Electronic Arts",
+    "title": "Software Engineering Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Hyderabad"
+    ],
+    "mode": "hybrid",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "Java",
+      "CI"
+    ],
+    "source_url": "https://in.indeed.com/viewjob?jk=ed8013394effaa77",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-electronic-arts-ea-4492386861",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://in.indeed.com/viewjob?jk=ed8013394effaa77",
+        "note": "Strong backend/devops fit. Public employer-branded copy gives req 216554, Hyderabad hybrid and six months. Exact first-party page and January start unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://in.indeed.com/viewjob?jk=ed8013394effaa77",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A17",
+    "employer": "HackerRank",
+    "title": "Software Development Engineer Intern",
+    "provider": "greenhouse",
+    "req_id": "8229735",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-05",
+    "start_to": "2027-01-05",
+    "end_date": null,
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "TypeScript"
+    ],
+    "source_url": "https://job-boards.greenhouse.io/hackerrank/jobs/8229735",
+    "elip_apply_url": "https://www.naukri.com/job-listings-software-development-engineer-intern-hackerrank-bengaluru-0-to-1-years-051026504891",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8229735",
+        "note": "Strong software fit. Employer ATS asks for six months in Bengaluru from 5 January 2027 and serves an application form. Best verified date fit in the four batches, subject to individual screening."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8229735",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A18",
+    "employer": "Wadhwani LEHS",
+    "title": "Machine Learning Intern",
+    "provider": "zoho",
+    "req_id": "146520000006944055",
+    "country": "IN",
+    "cities": [
+      "Delhi"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": 0,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "machine learning",
+    "skills": [
+      "Python",
+      "NumPy"
+    ],
+    "source_url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000006944055/Machine-Learning-Intern?source=CareerSite",
+    "elip_apply_url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000006944055",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000006944055/Machine-Learning-Intern?source=CareerSite",
+        "note": "Strong applied ML fit. Indexed employer ATS lists Delhi and fresher minimum. Direct fetch returned no job body. Live status, duration and January start unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000006944055/Machine-Learning-Intern?source=CareerSite",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A19",
+    "employer": "CommerceIQ",
+    "title": "SDE Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "React",
+      "LangGraph"
+    ],
+    "source_url": "https://job-boards.greenhouse.io/commerceiq",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/sde-intern-at-commerceiq-4495004962",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/commerceiq",
+        "note": "Strong software and retail fit. Employer ATS lists the exact title in Bengaluru. January start and six-month term unresolved. Distinct from #20 and from the separately named UI internship."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/commerceiq",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A20",
+    "employer": "CommerceIQ",
+    "title": "Data Scientist \u2013 Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "data science",
+    "skills": [
+      "Python",
+      "SQL",
+      "forecasting"
+    ],
+    "source_url": "https://job-boards.greenhouse.io/commerceiq",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/data-scientist-intern-at-commerceiq-4495001930",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/commerceiq",
+        "note": "Strong forecasting and retail fit. Employer ATS lists the exact title in Bengaluru. January start and six-month term unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/commerceiq",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A21",
+    "employer": "Enterpret",
+    "title": "Machine Learning Intern",
+    "provider": "greenhouse",
+    "req_id": "7723230003",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "machine learning",
+    "skills": [
+      "Python",
+      "LLMs"
+    ],
+    "source_url": "https://job-boards.greenhouse.io/enterpret/jobs/7723230003",
+    "elip_apply_url": "https://job-boards.greenhouse.io/enterpret/jobs/7723230003",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/enterpret/jobs/7723230003",
+        "note": "Strong LLM and retrieval fit. Employer ATS hosts an Apply form for requisition 7723230003. Dates and duration unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/enterpret/jobs/7723230003",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A22",
+    "employer": "Enterpret",
+    "title": "Backend Software Engineering Intern",
+    "provider": "greenhouse",
+    "req_id": "7847134003",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "backend engineering",
+    "skills": [
+      "Python"
+    ],
+    "source_url": "https://job-boards.greenhouse.io/enterpret/jobs/7847134003",
+    "elip_apply_url": "https://job-boards.greenhouse.io/enterpret/jobs/7847134003",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/enterpret/jobs/7847134003",
+        "note": "Strong backend fit. Employer ATS hosts an Apply form for 7847134003. Distinct from #21. Dates and duration unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://job-boards.greenhouse.io/enterpret/jobs/7847134003",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A23",
+    "employer": "Infineon",
+    "title": "Internship, System Development",
+    "provider": "infineon",
+    "req_id": "563808972295899",
+    "country": "MY",
+    "cities": [
+      "Malacca"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "source_url": "https://jobs.infineon.com/careers/job/563808972295899?domain=infineon.com",
+    "elip_apply_url": "https://jobs.infineon.com/careers/job/563808972295899?domain=infineon.com",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972295899?domain=infineon.com",
+        "note": "Technical overlap in Python/SQL. Elip shows on-site Malacca. Conflicts with India-only. Exact employer ATS lookup inaccessible, so status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972295899?domain=infineon.com",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A24",
+    "employer": "Infineon",
+    "title": "Internship, AI, Digitalization & Software Development",
+    "provider": "infineon",
+    "req_id": "563808972369188",
+    "country": "MY",
+    "cities": [
+      "Malacca"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "LLMs",
+      "CI"
+    ],
+    "source_url": "https://jobs.infineon.com/careers/job/563808972369188?domain=infineon.com",
+    "elip_apply_url": "https://jobs.infineon.com/careers/job/563808972369188?domain=infineon.com",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972369188?domain=infineon.com",
+        "note": "Strong LLM/software overlap. On-site Malacca violates India-only. Official ATS shell did not establish current application status."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972369188?domain=infineon.com",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A25",
+    "employer": "Infineon",
+    "title": "Internship, BE QM Digitalization",
+    "provider": "infineon",
+    "req_id": "563808972400704",
+    "country": "MY",
+    "cities": [
+      "Malacca"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "data analytics",
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "source_url": "https://jobs.infineon.com/careers/job/563808972400704?domain=infineon.com",
+    "elip_apply_url": "https://jobs.infineon.com/careers/job/563808972400704?domain=infineon.com",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972400704?domain=infineon.com",
+        "note": "Adjacent manufacturing AI/SQL. On-site Malacca violates India-only. Exact ATS lookup inaccessible. Status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972400704?domain=infineon.com",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A26",
+    "employer": "Infineon",
+    "title": "Internship, Advanced Analytics, AI & LLM",
+    "provider": "infineon",
+    "req_id": "563808972415383",
+    "country": "MY",
+    "cities": [
+      "Malacca"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://jobs.infineon.com/careers/job/563808972415383?domain=infineon.com",
+    "elip_apply_url": "https://jobs.infineon.com/careers/job/563808972415383?domain=infineon.com",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972415383?domain=infineon.com",
+        "note": "Strong analytics/RAG overlap. On-site Malacca violates India-only. Exact ATS lookup inaccessible. Status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972415383?domain=infineon.com",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A27",
+    "employer": "Sony Research India",
+    "title": "Speech Recognition Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "remote",
+    "remote_countries": [
+      "IN"
+    ],
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": "2026-11-01",
+    "start_to": "2026-11-07",
+    "end_date": null,
+    "duration_months": 6,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "machine learning",
+    "skills": [
+      "Python",
+      "FastAPI"
+    ],
+    "source_url": "https://www.sonyresearchindia.com/careers/",
+    "elip_apply_url": "https://www.linkedin.com/jobs/view/speech-recognition-intern-at-sony-research-india-4478019878",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://www.sonyresearchindia.com/careers/",
+        "note": "Adjacent speech/ML fit. Employer careers page links directly to the same requisition and gives six months. Linked description gives a first-week-of-November 2026 start, outside the January cohort. Current acceptance unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://www.sonyresearchindia.com/careers/",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A28",
+    "employer": "Infineon",
+    "title": "Internship, AI / IT",
+    "provider": "infineon",
+    "req_id": "563808972255106",
+    "country": "MY",
+    "cities": [
+      "Malacca"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "React"
+    ],
+    "source_url": "https://jobs.infineon.com/careers/job/563808972255106?domain=infineon.com",
+    "elip_apply_url": "https://jobs.infineon.com/careers/job/563808972255106?domain=infineon.com",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972255106?domain=infineon.com",
+        "note": "Strong applied AI/React overlap. On-site Malacca violates India-only. Exact ATS lookup inaccessible. Status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.infineon.com/careers/job/563808972255106?domain=infineon.com",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A29",
+    "employer": "Deloitte Shared Services India",
+    "title": "Devops Engineer Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "hybrid",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "platform engineering",
+    "skills": [
+      "Python",
+      "CI"
+    ],
+    "source_url": "https://getfirsthire.com/jobs/8fa5f41a6f13568b075cf7cab0bf7616ad435663af7d40f4eb8a3730b224f790",
+    "elip_apply_url": "https://www.naukri.com/job-listings-devops-engineer-intern-deloitte-shared-services-india-bengaluru-0-to-1-years-221026011519",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://getfirsthire.com/jobs/8fa5f41a6f13568b075cf7cab0bf7616ad435663af7d40f4eb8a3730b224f790",
+        "note": "Adjacent CI/platform fit. Public mirror corroborates Python and hybrid Bengaluru. No exact employer posting located. Dates and current status unresolved."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://getfirsthire.com/jobs/8fa5f41a6f13568b075cf7cab0bf7616ad435663af7d40f4eb8a3730b224f790",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A30",
+    "employer": "yellow.ai",
+    "title": "SDE Intern",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": "internship",
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "software engineering",
+    "skills": [
+      "Python",
+      "Java"
+    ],
+    "source_url": "https://yellow.ai/career/",
+    "elip_apply_url": "https://www.instahyre.com/job-446742-sde-intern-internship-at-yellow-bangalore/",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://yellow.ai/career/",
+        "note": "Strong product engineering overlap. Exact employer requisition unresolved. External mirrors are insufficient to verify duration, work mode or acceptance."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://yellow.ai/career/",
+        "note": "Rechecked the previously identified source and searched for a matching employer requisition. Existing field evidence retained."
+      }
+    ],
+    "probable_group": null
+  },
+  {
+    "id": "A31",
+    "employer": "SAP",
+    "title": "Machine Learning Engineer",
+    "provider": null,
+    "req_id": null,
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "remote_countries": null,
+    "job_type": null,
+    "elip_type": "internship",
+    "status": "unknown",
+    "verified_at": null,
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": null,
+    "academic_stages": null,
+    "graduation_max": null,
+    "degree_levels": null,
+    "minimum_experience_months": null,
+    "experience_basis": null,
+    "requirements_reviewed": false,
+    "curriculum_required": null,
+    "role_family": "machine learning",
+    "skills": [
+      "LLMs"
+    ],
+    "source_url": "https://jobs.sap.com/en/jobs/?location=Bengaluru",
+    "elip_apply_url": null,
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.sap.com/en/jobs/?location=Bengaluru",
+        "note": "Relevant ML topic. Elip tags Internship and ranks it the strongest of the Bengaluru results. Apply points to a Naukri action URL with an empty id. No exact SAP requisition verified. Job-type mismatch remains a hypothesis. Link shape and missing first-party detail are confirmed observations."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.sap.com/en/jobs/?location=Bengaluru",
+        "note": "SAP careers results did not establish an exact match. The action endpoint was not opened."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://jobs.sap.com/en/jobs/?location=Bengaluru",
+        "note": "Elip rendered a Naukri /saveCompanyApply action URL with an empty id. Destination was inspected as text only. No exact SAP requisition or employment type was verified."
+      }
+    ],
+    "probable_group": null
+  }
+]

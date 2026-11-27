@@ -1,0 +1,73 @@
+[
+  {
+    "id": "R01",
+    "employer": "Elip",
+    "title": "Software Engineer (six-month internship)",
+    "provider": "elip",
+    "req_id": "PsnWr",
+    "country": "IN",
+    "cities": [
+      "Gurugram"
+    ],
+    "mode": "conditional_remote",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": null,
+    "start_to": null,
+    "end_date": null,
+    "duration_months": 6,
+    "degree_fields": null,
+    "degree_levels": null,
+    "academic_stages": null,
+    "graduation_min": 2026,
+    "graduation_max": 2030,
+    "requirements_reviewed": false,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://app.tryelip.ai/jobs/PsnWr",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://app.tryelip.ai/jobs/PsnWr",
+        "note": "Elip page lists 75,000 monthly stipend, 150,000 monthly on conversion, and broad remote wording."
+      },
+      {
+        "date": "2026-11-27",
+        "url": "https://www.ycombinator.com/companies/elip-ai/jobs/Z3IDeCh-software-engineer-intern-6-months-ppo-opportunity",
+        "note": "Employer posting clarifies remote by exception and performance-based PPO, with base and ESOP components."
+      }
+    ],
+    "remote_countries": [
+      "IN"
+    ],
+    "compensation": [
+      {
+        "stage": "stipend",
+        "amount": 75000,
+        "period": "month"
+      },
+      {
+        "stage": "conversion_base",
+        "amount": 150000,
+        "period": "month",
+        "conditional": true
+      },
+      {
+        "stage": "conversion_ctc",
+        "amount": 2500000,
+        "period": "year",
+        "conditional": true
+      },
+      {
+        "stage": "conversion_equity",
+        "amount": 700000,
+        "period": "year",
+        "conditional": true
+      }
+    ]
+  }
+]

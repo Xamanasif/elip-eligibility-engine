@@ -1,0 +1,10 @@
+{
+  "degrees": [{"level":"bachelors", "field":"Chemical Engineering"}, {"level":"masters", "field":null}],
+  "graduation_year":2027, "academic_stage":"final_year", "internship_months":8, "industry_months":0,
+  "curricular_internship":null, "countries":["IN"], "cities":[], "modes":["onsite","hybrid","remote"],
+  "job_types":["internship"], "start_from":"2027-01-01", "start_to":"2027-01-31", "available_until":"2027-06-30",
+  "duration_months":6, "roles":["AI engineering","machine learning","data science","software engineering","backend engineering"],
+  "skills":["Python","SQL","React","TypeScript","LangGraph","RAG","LLMs","CI","forecasting","Java","FastAPI","NumPy"],
+  "preferred_cities":["Bengaluru","Gurugram","Hyderabad","Pune","Mumbai","Chennai","Delhi"],
+  "preferred_modes":[], "expected_stipend_inr":30000
+}

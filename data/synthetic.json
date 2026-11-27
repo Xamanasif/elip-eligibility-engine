@@ -1,0 +1,447 @@
+[
+  {
+    "id": "S01",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s-1",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S02",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s02",
+    "country": "MY",
+    "cities": [
+      "Melaka"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S03",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s03",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "closed",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S04",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s04",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "conditional_remote",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ],
+    "remote_countries": [
+      "IN"
+    ]
+  },
+  {
+    "id": "S05",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s05",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "conflict",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S06",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s06",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": null,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S07",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s07",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "penultimate"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S08",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s08",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "full_time",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  },
+  {
+    "id": "S09",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s09",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-27",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ],
+    "minimum_experience_months": 24,
+    "experience_basis": "industry"
+  },
+  {
+    "id": "S10",
+    "employer": "Demo Research",
+    "title": "Applied AI Engineering Intern",
+    "provider": "fixture",
+    "req_id": "s10",
+    "country": "IN",
+    "cities": [
+      "Bengaluru"
+    ],
+    "mode": "onsite",
+    "job_type": "internship",
+    "status": "open",
+    "verified_at": "2026-11-01",
+    "start_from": "2027-01-01",
+    "start_to": "2027-01-15",
+    "end_date": "2027-06-30",
+    "duration_months": 6,
+    "degree_fields": [
+      "Chemical Engineering"
+    ],
+    "degree_levels": [
+      "bachelors"
+    ],
+    "academic_stages": [
+      "final_year"
+    ],
+    "graduation_min": 2027,
+    "graduation_max": 2027,
+    "requirements_reviewed": true,
+    "role_family": "AI engineering",
+    "skills": [
+      "Python",
+      "RAG"
+    ],
+    "source_url": "https://example.com/synthetic",
+    "evidence": [
+      {
+        "date": "2026-11-27",
+        "url": "https://example.com/synthetic",
+        "note": "Synthetic test record. No real vacancy."
+      }
+    ]
+  }
+]

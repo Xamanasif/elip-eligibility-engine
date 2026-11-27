@@ -1,0 +1,170 @@
+{
+  "as_of": "2026-11-27",
+  "counts": {
+    "Ineligible": 9,
+    "Needs confirmation": 21,
+    "Closed": 1
+  },
+  "duplicate_warnings": [
+    {
+      "kind": "probable",
+      "ids": [
+        "A01",
+        "A02"
+      ]
+    },
+    {
+      "kind": "probable",
+      "ids": [
+        "A13",
+        "A14"
+      ]
+    }
+  ],
+  "top10": {
+    "baseline": {
+      "returned": 10,
+      "known_hard_violation": {
+        "n": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "confirmed_closed_leakage": {
+        "n": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "probable_duplicate_extra_slot_rate": {
+        "n": 1,
+        "denominator": 10,
+        "rate": 0.1
+      },
+      "exact_duplicate_extra_slot_rate": {
+        "n": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "needs_confirmation": {
+        "n": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "evidence_record_coverage": {
+        "n": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "eligible_recall": null
+    },
+    "eligibility_aware": {
+      "returned": 0,
+      "known_hard_violation": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "confirmed_closed_leakage": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "probable_duplicate_extra_slot_rate": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "exact_duplicate_extra_slot_rate": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "needs_confirmation": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "evidence_record_coverage": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "eligible_recall": null
+    }
+  },
+  "top31": {
+    "baseline": {
+      "returned": 31,
+      "known_hard_violation": {
+        "n": 8,
+        "denominator": 31,
+        "rate": 0.25806451612903225
+      },
+      "confirmed_closed_leakage": {
+        "n": 1,
+        "denominator": 31,
+        "rate": 0.03225806451612903
+      },
+      "probable_duplicate_extra_slot_rate": {
+        "n": 2,
+        "denominator": 31,
+        "rate": 0.06451612903225806
+      },
+      "exact_duplicate_extra_slot_rate": {
+        "n": 0,
+        "denominator": 31,
+        "rate": 0.0
+      },
+      "needs_confirmation": {
+        "n": 21,
+        "denominator": 31,
+        "rate": 0.6774193548387096
+      },
+      "evidence_record_coverage": {
+        "n": 31,
+        "denominator": 31,
+        "rate": 1.0
+      },
+      "eligible_recall": null
+    },
+    "eligibility_aware": {
+      "returned": 0,
+      "known_hard_violation": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "confirmed_closed_leakage": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "probable_duplicate_extra_slot_rate": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "exact_duplicate_extra_slot_rate": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "needs_confirmation": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "evidence_record_coverage": {
+        "n": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "eligible_recall": null
+    }
+  },
+  "engine_ms": {
+    "n": 100,
+    "median": 4.032,
+    "p95": 5.39
+  },
+  "eligible_recall_note": "No independent positive ground-truth label set covering all constraints. Empty returned lists have undefined rates."
+}

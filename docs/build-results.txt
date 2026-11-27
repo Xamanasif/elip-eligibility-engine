@@ -1,0 +1,16 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> elip-eligibility-engine@1.0.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.8 building client environment for production...
+transforming...
+node_modules/lucide-react/dist/esm/context.mjs (2:0): Module level directives cause errors when bundled, "use client" in "node_modules/lucide-react/dist/esm/context.mjs" was ignored.
+node_modules/lucide-react/dist/esm/Icon.mjs (2:0): Module level directives cause errors when bundled, "use client" in "node_modules/lucide-react/dist/esm/Icon.mjs" was ignored.
+✓ 2170 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.37 kB │ gzip:  0.28 kB
+dist/assets/index-n9aKA6f3.css   17.19 kB │ gzip:  4.54 kB
+dist/assets/index-CWL307FX.js   270.12 kB │ gzip: 84.38 kB
+✓ built in 1.74s

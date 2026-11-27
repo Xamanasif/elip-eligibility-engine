@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Audit review shows zero verified jobs, 21 ranked unresolved jobs and an accessible decision chart.",
+    "All 31 rows and the four outcome filters retain their original audit counts. Grouping preserves both members of each pair.",
+    "Search, country and work-mode filters, employer sorting and empty-result reset work. Distinct CommerceIQ postings stay separate.",
+    "Keyboard opens evidence, follows the paired vacancy without merging decisions, and Escape restores the original focus.",
+    "The baseline exposes its original top ten and is kept separate from the verified shortlist.",
+    "Multiple degree rows, chip entry/removal, dropdowns, dates, experience and stipend save through FastAPI and persist across refresh.",
+    "Profile drafts survive navigation, and a saved duration change recomputes the synthetic shortlist.",
+    "All five audit scenarios and the clearly labelled synthetic eligible fixture render. The regression posting shows stipend and PPO pay separately.",
+    "A browser-injected 503 displays an error, retry recovers, and rapid dataset switches show the latest scope.",
+    "A stale profile version reports a conflict, preserves the draft, and reloads only after explicit action.",
+    "360px viewport: review, evidence dialog, and profile have no horizontal overflow.",
+    "390px viewport: review, evidence dialog, and profile have no horizontal overflow.",
+    "430px viewport: review, evidence dialog, and profile have no horizontal overflow.",
+    "768px viewport: review, evidence dialog, and profile have no horizontal overflow."
+  ],
+  "browser_page_errors": []
+}
