@@ -29,6 +29,16 @@ with sync_playwright() as pw:
     assert page.request.get(PROFILE_URL + "?include_mode=true").json()["mode"] == "read_only"
 
     page.screenshot(path=SCREENSHOTS / "public-desktop.png")
+    page.get_by_role("button", name="All 31", exact=True).click()
+    search = page.get_by_role("searchbox", name="Search vacancies", exact=True)
+    search.fill("Agoda")
+    expect(page.get_by_text("1 of 31 shown", exact=True)).to_be_visible()
+    page.get_by_role("button", name="Clear filters", exact=True).click()
+    expect(search).to_have_value("")
+    page.get_by_role("button", name="Review 21 unresolved", exact=True).press("Enter")
+    expect(page.get_by_role("heading", name="Needs confirmation", exact=True)).to_be_focused()
+    expect(page.get_by_role("button", name="Needs confirmation 21", exact=True)).to_have_attribute("aria-pressed", "true")
+
     page.get_by_role("button", name="Closed 1", exact=True).click()
     with page.expect_download() as download:
         page.get_by_role("button", name="Download evidence", exact=True).click()
@@ -66,7 +76,9 @@ with sync_playwright() as pw:
     expect(phone.get_by_role("button", name="Download evidence", exact=True)).to_be_enabled()
     assert phone.evaluate("document.documentElement.scrollWidth === innerWidth")
     phone.screenshot(path=SCREENSHOTS / "public-mobile.png")
+    navigate(phone, "Guided demo")
+    expect(phone.get_by_role("heading", name="Guided demo", exact=True)).to_be_visible()
     assert not errors, errors
     browser.close()
 
-print("Public browser checks passed: fixed audit, filtered evidence, session preview and reload isolation.")
+print("Public browser checks passed: fixed audit, queue navigation, filter reset, evidence download, isolated profile preview and mobile navigation.")

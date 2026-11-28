@@ -48,18 +48,22 @@ export function Comparison({results}: {results: Results}) {
 function JobRow({job, open, position, related}: {job: Vacancy; open: (id: string) => void; position?: number; related: boolean}) {
   const gaps = exceptions(job);
   const shown = gaps.sort((a,b) => Number(b.result === "fail") - Number(a.result === "fail"));
+  const initials = job.employer.trim().split(/[\s.]+/).slice(0, 2).map(word => word[0]).join("").toUpperCase();
   return <article className="job-row">
     {position !== undefined && <span className="row-rank" aria-label={`Rank ${position}`}>{ordinal(position)}</span>}
     <div className="job-main">
-      <div className="job-company">{job.employer}{related && <span className="related-label"><Link2 size={12}/> Possible duplicate</span>}</div>
-      <button className="job-title" type="button" onClick={() => open(job.id)}>{job.title}</button>
-      <div className="job-meta"><span><MapPin size={13}/>{location(job)}</span>{job.mode && <span>{human(job.mode)}</span>}</div>
+      <span aria-hidden="true" className="company-mark">{initials}</span>
+      <div className="job-copy">
+        <div className="job-company">{job.employer}{related && <span className="related-label"><Link2 size={12}/> Possible duplicate</span>}</div>
+        <button className="job-title" type="button" onClick={() => open(job.id)}>{job.title}</button>
+        <div className="job-meta"><span><MapPin size={13}/>{location(job)}</span>{job.mode && <span>{human(job.mode)}</span>}</div>
+      </div>
     </div>
     <div className="job-summary">
       <Badge decision={job.decision}/>
       <p>{gaps.length ? shown.slice(0, 2).map(ruleName).join(" · ") : "Required checks passed"}{gaps.length > 2 && <span className="muted"> +{gaps.length - 2}</span>}</p>
     </div>
-    <div className="job-end"><span className="score">{job.score.toFixed(3)}</span>
+    <div className="job-end"><span className="score" title="Relevance score">{job.score.toFixed(3)}</span>
       <button className="btn icon subtle" aria-label={`Review ${job.title} at ${job.employer}`} onClick={() => open(job.id)}><ChevronRight size={18}/></button>
     </div>
   </article>;
@@ -90,7 +94,9 @@ export function JobList({jobs, results, group, ranked, open}: {
   </div>;
 }
 
-export function Shortlist({results, audit, open}: {results: Results; audit: boolean; open: (id: string) => void}) {
+export function Shortlist({results, audit, open, reviewUnresolved}: {
+  results: Results; audit: boolean; open: (id: string) => void; reviewUnresolved: () => void;
+}) {
   const unknown = results.groups["Needs confirmation"];
   const missing = new Set(unknown.flatMap(job => exceptions(job).map(r => r.code)));
   const examples = [
@@ -105,6 +111,9 @@ export function Shortlist({results, audit, open}: {results: Results; audit: bool
         <p>{audit && unknown.length ? "No real audit vacancy had enough verified information to pass every mandatory check." :
           "No vacancy passes every mandatory check with the current criteria."}</p>
         {!!examples.length && <p className="muted">Examples to check include {new Intl.ListFormat("en").format(examples as string[])}.</p>}
+        {unknown.length > 0 && <button type="button" className="text-button shortlist-link" onClick={reviewUnresolved}>
+          Review {unknown.length} unresolved <ArrowRight size={15}/>
+        </button>}
       </div>}
   </section>;
 }

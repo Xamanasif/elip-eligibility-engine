@@ -39,6 +39,7 @@ function ResultsList({results, scope, baseline, filter, update, open}: {
   const pool = baseline ? results.baseline : flatten(results);
   const tabs: (Decision | "All")[] = ["All", ...decisions];
   const visible = selectRows(pool, filter);
+  const hasFilters = Boolean(filter.search || filter.country || filter.mode || filter.sort !== "relevance");
   const countries = [...new Set(pool.map(j => j.country ?? "unknown"))].sort();
   const modes = [...new Set(pool.map(j => j.mode ?? "unknown"))].sort();
   const visibleIds = new Set(visible.map(job => job.id));
@@ -65,10 +66,10 @@ function ResultsList({results, scope, baseline, filter, update, open}: {
 
   return <section className="panel results-panel" aria-labelledby="results-heading">
     <div className="results-heading">
-      <div><h2 id="results-heading">{baseline ? "Relevance-only baseline" : filter.decision === "All" ? "All vacancies" : filter.decision}</h2>
+      <div><h2 id="results-heading" tabIndex={-1}>{baseline ? "Relevance-only baseline" : filter.decision === "All" ? "All vacancies" : filter.decision}</h2>
         <p>{baseline ? "The baseline orders cards by relevance score. The status on each row shows its eligibility outcome." :
           filter.decision === "All" ? "Browse the full dataset by evidence and decision." : outcomes[filter.decision]}</p></div>
-      <div className="intro-actions">
+      <div className="results-actions">
         <span className="count-label" role="status">{visible.length} of {pool.length} shown</span>
         <button type="button" className="btn secondary" onClick={downloadEvidence} disabled={!visible.length}>
           <Download size={15}/> Download evidence
@@ -95,7 +96,8 @@ function ResultsList({results, scope, baseline, filter, update, open}: {
     </div>
     <div className="list-legend"><label className="check"><input type="checkbox" checked={filter.group} onChange={e => update({...filter, group: e.target.checked})}/> Group possible duplicates</label>
       {pairCount > 0 && <a href="#possible-duplicate-groups">{pairCount} {pairCount === 1 ? "group" : "groups"}</a>}
-      <span>Relevance score <ArrowDown size={13}/></span>
+      {hasFilters && <button type="button" className="text-button" onClick={() => update({...blankFilters, decision: filter.decision, group: filter.group})}>Clear filters</button>}
+      <span className="score-legend">Relevance score {filter.sort === "relevance" && <ArrowDown size={13}/>}</span>
     </div>
     {visible.length ? <JobList jobs={visible} results={results} group={filter.group} ranked={filter.sort === "relevance"} open={open}/> :
       <div className="no-results"><Search size={22}/><h3>No vacancies to show</h3><p>{filter.search || filter.country || filter.mode ? "Try a different search or clear the filters." : "This category has no vacancies in the current dataset."}</p>
@@ -167,19 +169,35 @@ function App() {
     setJobId(undefined);
     requestAnimationFrame(() => focusBack.current?.focus());
   }
+  function reviewUnresolved() {
+    setFilter({...blankFilters, decision: "Needs confirmation", group: filter.group});
+    requestAnimationFrame(() => {
+      const heading = document.getElementById("results-heading");
+      heading?.focus({preventScroll: true});
+      heading?.scrollIntoView({block: "start"});
+    });
+  }
   const review = view === "review" || view === "baseline";
   return <>
     <a className="skip-link" href="#main-content">Skip to main content</a>
     <header className="topbar">
-      <a className="brand" href="#main-content" onClick={e => {e.preventDefault(); navigate("review");}}><span className="brand-icon"><Layers size={19}/></span><span>Eligibility Engine<small>Elip audit prototype</small></span></a>
-      <div className="top-actions"><span className="snapshot-date"><CalendarDays size={15}/> 27 Nov 2026 snapshot</span>
-        <button type="button" className="btn secondary header-demo" onClick={() => {setStep(0); navigate("demo");}}><Play size={15}/> <span>Guided demo</span></button></div>
+      <a className="brand" href="#main-content" onClick={e => {e.preventDefault(); navigate("review");}}>
+        <span className="brand-icon"><Layers size={20} strokeWidth={2.4} aria-hidden="true"/></span>
+        <span>Eligibility Engine<small>Elip audit prototype</small></span>
+      </a>
+      <div className="topbar-content">
+        <span className="workspace-label">Audit workspace</span>
+        <div className="top-actions"><span className="snapshot-date"><CalendarDays size={15}/> 27 Nov 2026 snapshot</span>
+          <button type="button" className="btn primary header-demo" onClick={() => {setStep(0); navigate("demo");}}><Play size={15}/> <span>Guided demo</span></button>
+        </div>
+      </div>
     </header>
     <div className="shell">
-      <aside className="sidebar"><nav aria-label="Main navigation">
+      <aside className="sidebar"><div className="sidebar-body"><nav aria-label="Main navigation">
         {nav.map(({id, label, icon: Icon}) => <button key={id} type="button" className={view === id ? "nav-link selected" : "nav-link"} onClick={() => navigate(id)} aria-current={view === id ? "page" : undefined}>
           <Icon size={18}/><span>{label}</span></button>)}
         </nav>{saved && <ProfileSummary profile={saved.profile} preview={saved.mode === "read_only"} edit={() => navigate("profile")}/>}
+        </div>
       </aside>
       <main id="main-content" ref={main} tabIndex={-1}>
         <div hidden={view !== "profile"}>
@@ -194,7 +212,8 @@ function App() {
           browse={next => {changeScope(next, true); navigate("review");}}/>}
         {review && <>
           <div className="page-intro review-intro">
-            <div><h1>{view === "baseline" ? "Baseline ranking" : "Match review"}</h1><p>Check which opportunities fit the candidate and which facts still need verification.</p></div>
+            <div><h1>{view === "baseline" ? "Baseline ranking" : "Match review"}</h1>
+              <p>{view === "baseline" ? "See how relevance-only ranking orders the same vacancies." : "Review recommendations against candidate criteria and employer evidence."}</p></div>
             <div className="intro-actions">
               <label className="dataset-select"><Database size={16}/><span className="sr-only">Dataset</span><select aria-label="Dataset" value={scope} onChange={e => changeScope(e.target.value as Scope)}>
                 {Object.entries(scopes).map(([v, label]) => <option key={v} value={v}>{label}</option>)}</select></label>
@@ -205,11 +224,11 @@ function App() {
             {previewReference && <button className="text-button" onClick={() => changeScope("synthetic")}>{saved?.mode === "read_only" ? "Use tab profile" : "Use saved profile"} <ArrowRight size={15}/></button>}</div>}
           {scope === "regression" && <div className="notice soft"><CircleHelp size={19}/><div><strong>Elip’s own posting</strong><span>Use this case to review conditional remote terms and separate stipend and conversion pay.</span></div></div>}
           {results && <>
-            {view === "review" && <div className="summary-grid"><Shortlist results={results} audit={scope === "audit"} open={openVacancy}/><Comparison results={results}/></div>}
+            {view === "review" && <div className="summary-grid"><Shortlist results={results} audit={scope === "audit"} open={openVacancy} reviewUnresolved={reviewUnresolved}/><Comparison results={results}/></div>}
             {view === "baseline" && <div className="notice soft"><SlidersHorizontal size={19}/><div><strong>Top {results.baseline.length} relevance-ranked cards</strong><span>Compare these cards with the verified shortlist, where mandatory requirements control admission.</span></div><button className="text-button" onClick={() => navigate("review")}>Match review <ArrowUpRight size={15}/></button></div>}
             <ResultsList results={results} scope={scope} baseline={view === "baseline"} filter={view === "baseline" ? baselineFilter : filter}
               update={view === "baseline" ? setBaselineFilter : setFilter} open={openVacancy}/>
-            <div className="data-note">{results.input_count} source cards · {results.duplicates.filter(x => x.kind === "probable").length} probable duplicate pairs · Matching uses the saved evidence snapshot</div>
+            <div className="data-note"><Database size={14} aria-hidden="true"/>{results.input_count} source cards · {results.duplicates.filter(x => x.kind === "probable").length} probable duplicate pairs · {fixedDate} evidence snapshot</div>
           </>}
         </>}
         {view !== "profile" && !results && (active?.error || (!reference && profileError) ?
