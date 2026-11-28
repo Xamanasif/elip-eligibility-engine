@@ -9,6 +9,7 @@ from playwright.sync_api import expect, sync_playwright
 
 URL = os.getenv("ELIP_TEST_URL", "http://127.0.0.1:8766/")
 PROFILE_URL = urljoin(URL, "/api/profile")
+SCREENSHOTS = Path(__file__).resolve().parent / "screenshots"
 
 
 def navigate(page, name):
@@ -19,7 +20,7 @@ def navigate(page, name):
 
 with sync_playwright() as pw:
     browser = pw.chromium.launch(executable_path=os.getenv("ELIP_CHROMIUM_PATH"))
-    page = browser.new_page(accept_downloads=True)
+    page = browser.new_page(accept_downloads=True, viewport={"width": 1440, "height": 1000})
     errors = []
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.goto(URL)
@@ -27,6 +28,7 @@ with sync_playwright() as pw:
     expect(page.get_by_role("button", name="Needs confirmation 21")).to_be_visible()
     assert page.request.get(PROFILE_URL + "?include_mode=true").json()["mode"] == "read_only"
 
+    page.screenshot(path=SCREENSHOTS / "public-desktop.png")
     page.get_by_role("button", name="Closed 1", exact=True).click()
     with page.expect_download() as download:
         page.get_by_role("button", name="Download evidence", exact=True).click()
@@ -40,7 +42,7 @@ with sync_playwright() as pw:
     assert report["vacancies"][0]["evidence"]
     assert "profile" not in report
 
-    page.get_by_label("Dataset").select_option("synthetic")
+    page.get_by_role("combobox", name="Dataset", exact=True).select_option("synthetic")
     expect(page.get_by_text("Synthetic test data", exact=True)).to_be_visible()
     before = page.request.get(PROFILE_URL).json()
     navigate(page, "Candidate profile")
@@ -59,6 +61,11 @@ with sync_playwright() as pw:
     page.reload()
     navigate(page, "Candidate profile")
     expect(page.get_by_label("Duration (months)")).to_have_value("6")
+    phone = browser.new_page(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
+    phone.goto(URL)
+    expect(phone.get_by_role("button", name="Download evidence", exact=True)).to_be_enabled()
+    assert phone.evaluate("document.documentElement.scrollWidth === innerWidth")
+    phone.screenshot(path=SCREENSHOTS / "public-mobile.png")
     assert not errors, errors
     browser.close()
 

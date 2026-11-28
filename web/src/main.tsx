@@ -196,7 +196,7 @@ function App() {
           <div className="page-intro review-intro">
             <div><h1>{view === "baseline" ? "Baseline ranking" : "Match review"}</h1><p>Check which opportunities fit the candidate and which facts still need verification.</p></div>
             <div className="intro-actions">
-              <label className="dataset-select"><Database size={16}/><span className="sr-only">Dataset</span><select value={scope} onChange={e => changeScope(e.target.value as Scope)}>
+              <label className="dataset-select"><Database size={16}/><span className="sr-only">Dataset</span><select aria-label="Dataset" value={scope} onChange={e => changeScope(e.target.value as Scope)}>
                 {Object.entries(scopes).map(([v, label]) => <option key={v} value={v}>{label}</option>)}</select></label>
               <button className="btn secondary" onClick={() => setMatchReload(v => v + 1)} disabled={!results}><RefreshCw size={15}/> Re-run</button>
             </div>
