@@ -2,7 +2,7 @@
 
 ## Local presentation
 
-Run the Windows commands in the [README](../README.md). The browser interface and the API use the same FastAPI server. The application runs from the supplied frontend build. A separate Node process is unnecessary for the demo.
+Run the Windows commands in the [README](../README.md). The browser interface and the API use the same FastAPI server. Build the frontend from this revision before starting FastAPI. After the build, FastAPI serves the UI and API from one process.
 
 For a clean presentation on Windows PowerShell:
 
@@ -25,7 +25,19 @@ docker volume create elip-demo-data
 docker run --rm -p 127.0.0.1:8765:8765 -v elip-demo-data:/app/var elip-eligibility
 ```
 
-The Dockerfile builds the React bundle and serves it with FastAPI. Docker was unavailable in the verification environment. The browser checks ran against the local FastAPI process. For remote access, put the service behind authentication and HTTPS. The prototype uses one shared candidate profile.
+The Dockerfile builds the React bundle and serves it with FastAPI. Docker was unavailable in the verification environment. The browser checks ran against the local FastAPI process. ## Public demo
+
+Set `ELIP_READ_ONLY=1` in the service environment, then deploy the built app. This mode loads the checked-in fixtures, skips SQLite initialization, and rejects profile and evidence writes. A visitor can change criteria in their tab and preview matches, and refreshing returns to the reference profile. Local mode keeps the editable SQLite workflow. Host editable instances behind authentication and HTTPS.
+
+`Download evidence` exports the currently filtered list as JSON, with the snapshot date, source links, check outcomes, and possible duplicate group IDs. The JSON contains no candidate profile. Use the All filter to export all 31 audit cards.
+
+The public browser check targets a protected local instance on port 8766:
+
+```bash
+ELIP_READ_ONLY=1 python -m uvicorn elip.app:app --port 8766
+# In another shell after installing Chromium:
+python docs/browser-public-smoke.py
+```
 
 ## Reproduce the browser checks
 

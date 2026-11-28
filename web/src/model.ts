@@ -10,7 +10,7 @@ export type Profile = {
   industry_months: number; internship_months: number; equivalent_months: number | null;
   curricular_internship: boolean | null; preferred_cities: string[]; preferred_modes: string[];
 };
-export type Saved = {version: number; profile: Profile};
+export type Saved = {version: number; profile: Profile; mode?: "read_only" | "editable"};
 export type Reason = {code: string; result: "pass" | "fail" | "unknown"; value: string; evidence_url: string};
 export type Evidence = {url: string; date: string; note: string};
 export type Vacancy = {

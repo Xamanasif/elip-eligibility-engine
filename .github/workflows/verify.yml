@@ -18,3 +18,25 @@ jobs:
       - run: python -m pytest -q
       - run: npm ci --prefix web
       - run: npm run build --prefix web
+      - name: Record audit snapshot evaluation
+        run: python -m elip.evaluation
+      - run: python -m pip install playwright
+      - run: python -m playwright install --with-deps chromium
+      - name: Check editable dashboard
+        run: |
+          ELIP_DB_PATH="$RUNNER_TEMP/editable.sqlite3" python -m uvicorn elip.app:app --port 8765 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          curl --retry 20 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:8765/api/profile >/dev/null
+          python docs/browser-smoke.py
+      - name: Check public read-only dashboard
+        run: |
+          ELIP_READ_ONLY=1 python -m uvicorn elip.app:app --port 8766 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          curl --retry 20 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:8766/api/profile >/dev/null
+          python docs/browser-public-smoke.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browser-build
+          path: web/dist/

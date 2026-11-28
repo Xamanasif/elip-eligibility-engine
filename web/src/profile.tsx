@@ -85,6 +85,7 @@ export function Editor({saved, onSaved, onReload}: {saved: Saved; onSaved: (s: S
   return <div className="profile-page">
     <div className="page-intro">
       <h1>Candidate profile</h1><p>Hard requirements determine eligibility. Preferences influence relevance scores.</p>
+      {saved.mode === "read_only" && <p>Edits apply to this tab until you reload. The public demo uses a fixed evidence snapshot.</p>}
     </div>
     <form onSubmit={async e => {
       e.preventDefault();
@@ -92,7 +93,12 @@ export function Editor({saved, onSaved, onReload}: {saved: Saved; onSaved: (s: S
       setSaving(true);
       try {
         const profile = {...draftProfile, degrees: draftProfile.degrees.map(d => ({...d, field: d.field?.trim() || null}))};
-        onSaved(await api<Saved>("/api/profile", "PUT", {version: saved.version, profile}));
+        if (saved.mode === "read_only") {
+          const validated = await api<Profile>("/api/profile/preview", "POST", profile);
+          onSaved({version: saved.version + 1, profile: validated, mode: saved.mode});
+        } else {
+          onSaved(await api<Saved>("/api/profile", "PUT", {version: saved.version, profile}));
+        }
       } catch (error) {
         setFailure({text: error instanceof Error ? error.message : "The profile could not be saved.",
           conflict: error instanceof ApiError && error.status === 409});
@@ -159,7 +165,7 @@ export function Editor({saved, onSaved, onReload}: {saved: Saved; onSaved: (s: S
       <div className="form-footer">
         <span className="muted">{dirty ? "Unsaved changes" : "Preferences saved"}</span>
         <div className="form-actions"><button type="button" className="btn secondary" disabled={saving || !dirty} onClick={resetDraft}>Discard changes</button>
-        <button type="submit" className="btn primary" disabled={saving || !dirty}><Check size={16}/>{saving ? "Saving…" : "Save profile"}</button></div>
+        <button type="submit" className="btn primary" disabled={saving || !dirty}><Check size={16}/>{saving ? "Saving…" : (saved.mode === "read_only" ? "Apply preview" : "Save profile")}</button></div>
       </div>
       {failure && <div className="notice error" role="alert">{failure.text}
         {failure.conflict && <button type="button" className="btn secondary" onClick={onReload}><RefreshCw size={15}/> Reload saved profile and discard edits</button>}</div>}

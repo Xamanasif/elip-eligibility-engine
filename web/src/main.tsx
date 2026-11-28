@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 import {createRoot} from "react-dom/client";
-import {ArrowDown, ArrowRight, ArrowUpRight, CalendarDays, CircleHelp, Database, FlaskConical, Layers, ListChecks, Play, RefreshCw, Search, Settings2, ShieldCheck, SlidersHorizontal} from "lucide-react";
+import {ArrowDown, ArrowRight, ArrowUpRight, CalendarDays, CircleHelp, Database, Download, FlaskConical, Layers, ListChecks, Play, RefreshCw, Search, Settings2, ShieldCheck, SlidersHorizontal} from "lucide-react";
 import {api, decisions, type Profile, type Results, type Saved, type Scope, scopes, type Decision, fixedDate, flatten, human} from "./model";
 import {Comparison, type Filter, JobDialog, JobList, selectRows, Shortlist, type Sort} from "./vacancies";
 import {Editor} from "./profile";
@@ -23,9 +23,9 @@ const outcomes = {
   Closed: "Employer evidence confirmed these vacancies were closed.",
 };
 
-function ProfileSummary({profile, edit}: {profile: Profile; edit: () => void}) {
+function ProfileSummary({profile, preview, edit}: {profile: Profile; preview: boolean; edit: () => void}) {
   return <section className="side-profile" aria-label="Saved profile summary">
-    <div className="side-profile-title"><span className="avatar"><ShieldCheck size={16}/></span><div><strong>Candidate criteria</strong><small>Saved profile</small></div></div>
+    <div className="side-profile-title"><span className="avatar"><ShieldCheck size={16}/></span><div><strong>Candidate criteria</strong><small>{preview ? "Tab preview" : "Saved profile"}</small></div></div>
     <dl><div><dt>Country</dt><dd>{profile.countries.join(", ")}</dd></div>
       <div><dt>Employment</dt><dd>{profile.job_types.map(human).join(", ")}</dd></div>
       <div><dt>Duration</dt><dd>{profile.duration_months} months</dd></div></dl>
@@ -33,8 +33,8 @@ function ProfileSummary({profile, edit}: {profile: Profile; edit: () => void}) {
   </section>;
 }
 
-function ResultsList({results, baseline, filter, update, open}: {
-  results: Results; baseline: boolean; filter: Filter; update: (v: Filter) => void; open: (id: string) => void;
+function ResultsList({results, scope, baseline, filter, update, open}: {
+  results: Results; scope: Scope; baseline: boolean; filter: Filter; update: (v: Filter) => void; open: (id: string) => void;
 }) {
   const pool = baseline ? results.baseline : flatten(results);
   const tabs: (Decision | "All")[] = ["All", ...decisions];
@@ -43,12 +43,37 @@ function ResultsList({results, baseline, filter, update, open}: {
   const modes = [...new Set(pool.map(j => j.mode ?? "unknown"))].sort();
   const visibleIds = new Set(visible.map(job => job.id));
   const pairCount = filter.group ? results.duplicates.filter(w => w.kind === "probable" && w.ids.every(id => visibleIds.has(id))).length : 0;
+
+  function downloadEvidence() {
+    const report = {
+      as_of: fixedDate,
+      dataset: scope,
+      view: baseline ? "baseline" : "review",
+      filter,
+      total_cards: results.input_count,
+      displayed_cards: visible.length,
+      vacancies: visible,
+      duplicate_groups: results.duplicates.filter(group => group.ids.some(id => visibleIds.has(id))),
+    };
+    const url = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], {type: "application/json"}));
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `elip-${scope}-${report.view}-evidence.json`;
+    anchor.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   return <section className="panel results-panel" aria-labelledby="results-heading">
     <div className="results-heading">
       <div><h2 id="results-heading">{baseline ? "Relevance-only baseline" : filter.decision === "All" ? "All vacancies" : filter.decision}</h2>
         <p>{baseline ? "The baseline orders cards by relevance score. The status on each row shows its eligibility outcome." :
           filter.decision === "All" ? "Browse the full dataset by evidence and decision." : outcomes[filter.decision]}</p></div>
-      <span className="count-label" role="status">{visible.length} of {pool.length} shown</span>
+      <div className="intro-actions">
+        <span className="count-label" role="status">{visible.length} of {pool.length} shown</span>
+        <button type="button" className="btn secondary" onClick={downloadEvidence} disabled={!visible.length}>
+          <Download size={15}/> Download evidence
+        </button>
+      </div>
     </div>
     <div className="outcome-tabs" role="group" aria-label="Eligibility categories">{tabs.map(tab => {
       const count = tab === "All" ? pool.length : pool.filter(v => v.decision === tab).length;
@@ -103,7 +128,7 @@ function App() {
 
   useEffect(() => {
     const abort = new AbortController();
-    api<Saved>("/api/profile", "GET", undefined, abort.signal).then(s => {setSaved(s); setProfileError("");})
+    api<Saved>("/api/profile?include_mode=true", "GET", undefined, abort.signal).then(s => {setSaved(s); setProfileError("");})
       .catch(e => {if (!abort.signal.aborted) setProfileError(errorText(e));});
     return () => abort.abort();
   }, [profileReload]);
@@ -111,7 +136,11 @@ function App() {
   useEffect(() => {
     if (!reference && !saved) return;
     const abort = new AbortController();
-    api<Results>(reference ? "/api/match/demo" : "/api/match", "POST", {dataset: activeScope, k: 10, as_of: fixedDate}, abort.signal)
+    const query = {dataset: activeScope, k: 10, as_of: fixedDate};
+    const localPreview = !reference && saved?.mode === "read_only";
+    const endpoint = reference ? "/api/match/demo" : localPreview ? "/api/match/preview" : "/api/match";
+    const payload = localPreview ? {...query, profile: saved?.profile} : query;
+    api<Results>(endpoint, "POST", payload, abort.signal)
       .then(result => {if (!abort.signal.aborted) setSnapshot({key: matchKey, result});})
       .catch(e => {if (!abort.signal.aborted) setSnapshot({key: matchKey, error: errorText(e)});});
     return () => abort.abort();
@@ -150,16 +179,16 @@ function App() {
       <aside className="sidebar"><nav aria-label="Main navigation">
         {nav.map(({id, label, icon: Icon}) => <button key={id} type="button" className={view === id ? "nav-link selected" : "nav-link"} onClick={() => navigate(id)} aria-current={view === id ? "page" : undefined}>
           <Icon size={18}/><span>{label}</span></button>)}
-        </nav>{saved && <ProfileSummary profile={saved.profile} edit={() => navigate("profile")}/>}
+        </nav>{saved && <ProfileSummary profile={saved.profile} preview={saved.mode === "read_only"} edit={() => navigate("profile")}/>}
       </aside>
       <main id="main-content" ref={main} tabIndex={-1}>
         <div hidden={view !== "profile"}>
           {saved && profileError && <div className="notice error" role="alert">{profileError}
             <button className="btn secondary" onClick={() => setProfileReload(i => i + 1)}>Retry profile reload</button></div>}
-          {saved ? <Editor key={saved.version} saved={saved} onSaved={s => {setSaved(s); setSavedNotice(true);}}
+          {saved ? <Editor key={saved.version} saved={saved} onSaved={s => {setSaved(s); setPreviewReference(false); setSavedNotice(true);}}
             onReload={() => setProfileReload(v => v + 1)}/> :
             <section className="panel empty-load"><h1>Candidate profile</h1>{profileError ? <div role="alert">{profileError}<button className="btn secondary" onClick={() => setProfileReload(i => i + 1)}>Retry profile</button></div> : <p role="status">Loading candidate profile…</p>}</section>}
-          {savedNotice && <div className="notice success saved-notice" role="status"><strong>Profile saved.</strong> Matching uses the updated criteria. <button className="text-button" onClick={() => navigate("review")}>View matches <ArrowRight size={14}/></button></div>}
+          {savedNotice && <div className="notice success saved-notice" role="status"><strong>{saved?.mode === "read_only" ? "Profile preview applied." : "Profile saved."}</strong> Matching uses the updated criteria. <button className="text-button" onClick={() => navigate("review")}>View matches <ArrowRight size={14}/></button></div>}
         </div>
         {view === "demo" && <GuidedDemo step={step} setStep={setStep} results={results} open={openVacancy}
           browse={next => {changeScope(next, true); navigate("review");}}/>}
@@ -173,12 +202,12 @@ function App() {
             </div>
           </div>
           {scope === "synthetic" && <div className="notice synthetic"><FlaskConical size={19}/><div><strong>Synthetic test data</strong><span>These fictional vacancies demonstrate rule behavior.</span></div>
-            {previewReference && <button className="text-button" onClick={() => changeScope("synthetic")}>Use saved profile <ArrowRight size={15}/></button>}</div>}
+            {previewReference && <button className="text-button" onClick={() => changeScope("synthetic")}>{saved?.mode === "read_only" ? "Use tab profile" : "Use saved profile"} <ArrowRight size={15}/></button>}</div>}
           {scope === "regression" && <div className="notice soft"><CircleHelp size={19}/><div><strong>Elip’s own posting</strong><span>Use this case to review conditional remote terms and separate stipend and conversion pay.</span></div></div>}
           {results && <>
             {view === "review" && <div className="summary-grid"><Shortlist results={results} audit={scope === "audit"} open={openVacancy}/><Comparison results={results}/></div>}
             {view === "baseline" && <div className="notice soft"><SlidersHorizontal size={19}/><div><strong>Top {results.baseline.length} relevance-ranked cards</strong><span>Compare these cards with the verified shortlist, where mandatory requirements control admission.</span></div><button className="text-button" onClick={() => navigate("review")}>Match review <ArrowUpRight size={15}/></button></div>}
-            <ResultsList results={results} baseline={view === "baseline"} filter={view === "baseline" ? baselineFilter : filter}
+            <ResultsList results={results} scope={scope} baseline={view === "baseline"} filter={view === "baseline" ? baselineFilter : filter}
               update={view === "baseline" ? setBaselineFilter : setFilter} open={openVacancy}/>
             <div className="data-note">{results.input_count} source cards · {results.duplicates.filter(x => x.kind === "probable").length} probable duplicate pairs · Matching uses the saved evidence snapshot</div>
           </>}

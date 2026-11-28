@@ -4,7 +4,14 @@ An internship-matching prototype by Zaman Asif, BITS Pilani. The real dataset co
 
 ## Run the demo
 
-The ZIP includes the built React interface. Python 3.11 or 3.12 is sufficient to run the demo.
+The original Dashboard Update ZIP contains a built interface. For this revision, build the updated React interface with Node.js 22 before launching FastAPI. The Dockerfile also builds the frontend.
+
+```bash
+npm ci --prefix web
+npm run build --prefix web
+```
+
+Python 3.11 or 3.12 can then run the app.
 
 ```powershell
 py -3.12 -m venv .venv
@@ -14,7 +21,7 @@ py -3.12 -m venv .venv
 
 On macOS or Linux, use `python3 -m venv .venv` and `.venv/bin/python` in place of the Windows interpreter path. Open <http://127.0.0.1:8765/>. FastAPI’s API documentation is at <http://127.0.0.1:8765/docs>.
 
-Each new SQLite database is seeded once. Set `ELIP_DB_PATH` to a separate database file to keep a clean demo or use your existing candidate profile. Use the updated project source and its frontend bundle together.
+Each new SQLite database is seeded once. Set `ELIP_DB_PATH` to a separate database file to keep a clean demo or use your existing candidate profile. Use the updated project source and its frontend bundle together. Set `ELIP_READ_ONLY=1` for a public demo.
 
 ## Demonstrate in 90 seconds
 
