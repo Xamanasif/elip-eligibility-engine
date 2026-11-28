@@ -25,7 +25,8 @@ class PreviewQuery(MatchQuery):
 
 def create_app(db_path=None, *, read_only: bool | None = None):
     if read_only is None:
-        read_only = os.getenv("ELIP_READ_ONLY", "").strip().lower() in {"1", "true", "yes"}
+        setting = os.getenv("ELIP_READ_ONLY", os.getenv("RENDER", ""))
+        read_only = setting.strip().lower() in {"1", "true", "yes"}
     store = Store(db_path or os.getenv("ELIP_DB_PATH", str(ROOT / "var/engine.sqlite3")))
     snapshots: dict[Dataset, list[Vacancy]] = {}
     reference: Profile

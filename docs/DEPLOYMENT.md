@@ -25,9 +25,11 @@ docker volume create elip-demo-data
 docker run --rm -p 127.0.0.1:8765:8765 -v elip-demo-data:/app/var elip-eligibility
 ```
 
-The Dockerfile builds the React bundle and serves it with FastAPI. Docker was unavailable in the verification environment. The browser checks ran against the local FastAPI process. ## Public demo
+The Dockerfile builds the React bundle and serves it with FastAPI. Docker was unavailable in the verification environment. The browser checks ran against the local FastAPI process.
 
-Set `ELIP_READ_ONLY=1` in the service environment, then deploy the built app. This mode loads the checked-in fixtures, skips SQLite initialization, and rejects profile and evidence writes. A visitor can change criteria in their tab and preview matches, and refreshing returns to the reference profile. Local mode keeps the editable SQLite workflow. Host editable instances behind authentication and HTTPS.
+## Public demo
+
+Render sets `RENDER=true`, so the deployed demo defaults to read-only mode. On other hosts, set `ELIP_READ_ONLY=1`. An explicit `ELIP_READ_ONLY` setting takes precedence. This mode loads the checked-in fixtures, skips SQLite initialization, and rejects profile and evidence writes. A visitor can change criteria in their tab and preview matches, and refreshing returns to the reference profile. Local mode keeps the editable SQLite workflow. Host editable instances behind authentication and HTTPS.
 
 `Download evidence` exports the currently filtered list as JSON, with the snapshot date, source links, check outcomes, and possible duplicate group IDs. The JSON contains no candidate profile. Use the All filter to export all 31 audit cards.
 

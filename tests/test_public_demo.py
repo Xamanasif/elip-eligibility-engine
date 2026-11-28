@@ -49,3 +49,24 @@ def test_preview_is_isolated_and_does_not_create_a_database(tmp_path):
         assert demo.get("/api/profile").json()["profile"] == original
         assert demo.post("/api/match/preview", json={"profile": {**original, "countries": []}}).status_code == 422
     assert not database.exists()
+
+
+
+def test_render_uses_read_only_mode_by_default(tmp_path, monkeypatch):
+    monkeypatch.setenv("RENDER", "true")
+    monkeypatch.delenv("ELIP_READ_ONLY", raising=False)
+    database = tmp_path / "demo.db"
+    with TestClient(create_app(str(database))) as demo:
+        result = demo.get("/api/profile?include_mode=true").json()
+        assert result["mode"] == "read_only"
+    assert not database.exists()
+
+
+def test_explicit_mode_overrides_the_render_default(tmp_path, monkeypatch):
+    monkeypatch.setenv("RENDER", "true")
+    monkeypatch.setenv("ELIP_READ_ONLY", "0")
+    database = tmp_path / "demo.db"
+    with TestClient(create_app(str(database))) as demo:
+        result = demo.get("/api/profile?include_mode=true").json()
+        assert result["mode"] == "editable"
+    assert database.exists()
